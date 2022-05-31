@@ -11,13 +11,9 @@ namespace Cab_Invoice
         public double CostPerKm = 10;
         public int CostPerMinute = 1;
         public int MinimumFare = 5;
-        public double CalculateFare()
+        public double CalculateFare(double Distance,int Time)
         {
-            Console.WriteLine("Please enter the Distance");
-            double Distance = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Please enter the Time_in_Minutes");
-            double Time_in_minutes = Convert.ToDouble(Console.ReadLine());
-            double Fare = (CostPerKm * Distance) + (CostPerMinute * Time_in_minutes);
+            double Fare = (CostPerKm * Distance) + (CostPerMinute * Time);
             return Math.Max(Fare, MinimumFare);
         }
     }
