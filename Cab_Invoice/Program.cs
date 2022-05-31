@@ -18,7 +18,7 @@ while (true)
             InvoiceGenerator uc2 = new();
             MultipleRides[] rides = { new MultipleRides(10, 20), new MultipleRides(15, 25) };
             double totalfare = uc2.CalculateFare(rides);
-            Console.WriteLine("Aggregate fare Value for day is :" + totalfare);
+            Console.WriteLine("Aggregate fare Value is :" + totalfare);
             break;
         default:
             Console.WriteLine("Please choose the correct option!");
