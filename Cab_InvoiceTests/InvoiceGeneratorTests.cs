@@ -37,5 +37,17 @@ namespace Cab_Invoice.Tests
             double avg = totalFare / numOfRides;
             Assert.AreEqual(147.5, avg);
         }
+        [TestMethod()]
+        public void CalculateFareTest3()
+        {
+            InvoiceGenerator uc4 = new();
+            MultipleRides[] rides1 = { new MultipleRides(10, 20), new MultipleRides(15, 25) };
+            double totalFare = uc4.CalculateFare(rides1);
+            int numOfRides = uc4.count;
+            double avg = totalFare / numOfRides;
+            Assert.AreEqual(2, numOfRides);
+
+        }
+
     }
 }
